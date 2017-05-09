@@ -58,7 +58,7 @@ public class Savings extends Account {
 	 */
 	public static void main(String[] args) {
 	
-		Customer cust = new Customer("Boss", "123-456-7890");
+		Customer cust = new Customer("Boss", "123 Money Street", "123-456-7890");
 	    
 	    Savings account = new Savings(cust);
 	    

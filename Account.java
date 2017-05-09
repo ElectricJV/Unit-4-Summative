@@ -1,9 +1,5 @@
 import java.text.DecimalFormat;
 
-class Customer
-{
-
-}
 
 
 public class Account
@@ -71,6 +67,9 @@ public class Account
 		return this.balance;
 	}
 
+	public Customer getOwner() {
+		return owner;
+	}
 
 	public void generateAcctNumber ()
 	{
