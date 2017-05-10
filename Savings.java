@@ -7,6 +7,12 @@ import javax.swing.*;
 /**
  * @author Joshua
  * Date: May 2017
+ * Description: 
+ * Method List: Savings(Customer owner) - Constructor to create a savings account.
+ * 				withdraw(double amt) - Method that withdraws a sum of money from the savings account.
+ * 				changeFee(double fee) - Method to change the fee.
+ * 				toString() - Method which returns the owner's information and the balance in their account.
+ * 				main(String[] args) - Self-Testing main method.
  */
 public class Savings extends Account {
 

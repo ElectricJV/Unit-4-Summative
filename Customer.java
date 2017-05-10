@@ -1,12 +1,14 @@
-
 /**
  * @author Jhenelle
- *
+ * Date: May 2017
  */
 public class Customer {
 	
 	private String name, address, phone; // declare variables
 
+	/**
+	 * Default constructor to initialise the data
+	 */
 	public Customer() {
 		// initialises data
 		this.name = "";
@@ -15,6 +17,9 @@ public class Customer {
 
 	}
 
+	/**
+	 * Constructor to create a customer with specific info
+	 */
 	public Customer(String name, String address, String phone) {
 		// overrides Customer method and initialises variables with specific
 		// info
@@ -24,29 +29,25 @@ public class Customer {
 
 	}
 
+	// Getters and Setter methods
 	public String getName() {
 		// retrieves name
 		return name;
 	}
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
 	public String getAddress() {
 		// retrieves address
 		return address;
 	}
-
 	public void setAddress(String address) {
 		this.address = address;
 	}
-
 	public String getPhone() {
 		// retrieves phone number
 		return phone;
 	}
-
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}

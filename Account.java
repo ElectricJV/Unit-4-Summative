@@ -1,10 +1,16 @@
 import java.text.DecimalFormat;
 
+/**
+ * 
+ */
 
-
+/**
+ * @author Sanjeev
+ * Date: May 2017
+ */
 public class Account
 {
-	// class data
+	// Class data
 	private double balance;
 	private long accountNumber;
 	private final long MAXACCT = 999999999999L;
@@ -113,11 +119,5 @@ public class Account
 		else 
 			System.out.println("Cannot widthdraw more then the balance");
 	}
-
-	// other useful methods could include a method to
-	// change the customer object and
-	// to retrieve the customer method
-	// toString method
 	
-
 }
