@@ -43,7 +43,7 @@ public class Savings extends Account {
 			return super.withdraw(amt + fee);
 		}
 	}
-	
+
 	/**
 	 * Method to change the fee when withdrawing.
 	 */
@@ -51,7 +51,7 @@ public class Savings extends Account {
 		this.fee = newFee;
 		return fee;
 	}
-	
+
 	/**
 	 * Method to convert the owner and their balance to a string.
 	 */
@@ -63,35 +63,34 @@ public class Savings extends Account {
 	 * Self-Testing Main
 	 */
 	public static void main(String[] args) {
-	
-		Customer cust = new Customer("Boss", "123 Money Street", "123-456-7890");
-	    
-	    Savings account = new Savings(cust);
-	    
-	    JOptionPane.showMessageDialog(null, "Account number: " + account.readAccountNumber() + "\nCustomer: " + account.getOwner());
-	    
-	    double newFee = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter Fee: "));
-	    account.changeFee(newFee);
-	    
-	    double amount = Double.parseDouble(JOptionPane.showInputDialog(null, "Please enter the initial amount for your account: "));
-	    account.setBalance(amount);
-	    
-	    System.out.println("Account: $" + account.getBalance());
-	    
-	    amount = Double.parseDouble(JOptionPane.showInputDialog(null, "Please enter amount to deposit: ")); 
-	    account.deposit(amount);
-	    
-	    System.out.println("Account (after deposit): $" + account.getBalance());
-	    
-	    amount = Double.parseDouble(JOptionPane.showInputDialog(null, "Please enter amount to withdraw: "));
-	    
-	    while (!account.withdraw(amount))
-	    {
-	      amount = Double.parseDouble(JOptionPane.showInputDialog(null, "Not enough funds. Please enter new amount: "));;
-	    }
-	    
-	    System.out.println("New balance: $" + account.getBalance());
-	    System.out.println("Final Account: " + account.toString());
-	}
 
+		Customer cust = new Customer("Boss", "123 Money Street", "123-456-7890");
+
+		Savings account = new Savings(cust);
+
+		JOptionPane.showMessageDialog(null, "Account number: " + account.readAccountNumber() + "\nCustomer: " + account.getOwner());
+
+		double newFee = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter Fee: "));
+		account.changeFee(newFee);
+
+		double amount = Double.parseDouble(JOptionPane.showInputDialog(null, "Please enter the initial amount for your account: "));
+		account.setBalance(amount);
+
+		System.out.println("Account: $" + account.getBalance());
+
+		amount = Double.parseDouble(JOptionPane.showInputDialog(null, "Please enter amount to deposit: ")); 
+		account.deposit(amount);
+
+		System.out.println("Account (after deposit): $" + account.getBalance());
+
+		amount = Double.parseDouble(JOptionPane.showInputDialog(null, "Please enter amount to withdraw: "));
+
+		while (!account.withdraw(amount))
+		{
+			amount = Double.parseDouble(JOptionPane.showInputDialog(null, "Not enough funds. Please enter new amount: "));;
+		}
+
+		System.out.println("New balance: $" + account.getBalance());
+		System.out.println("Final Account: " + account.toString());
+	}
 }

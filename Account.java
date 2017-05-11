@@ -44,12 +44,12 @@ public class Account
 	}
 
 
-	public void deposit (double amount)
+	public boolean deposit (double amount)
 	{
 		// deposits money
 		if(amount > 0)
 			this.balance = this.balance + amount;
-
+		return false;
 	}
 
 
@@ -91,14 +91,14 @@ public class Account
 		// returns account number
 		return this.accountNumber;
 	}
-	
+
 	public String toString (){
-		
+
 		DecimalFormat df = new DecimalFormat("0.00");
 		String balanceFormatted = df.format(this.balance);
 		return(this.accountNumber + " = $" + balanceFormatted);
 	}
-	
+
 	public void setBalance(double bal)
 	{
 		if(bal > 0)
@@ -110,14 +110,14 @@ public class Account
 		// Self Testing Main
 		Account savingsAccount = new Account();
 		System.out.println(savingsAccount);
-		
+
 		savingsAccount.deposit(1000);
 		System.out.println(savingsAccount);
-		
+
 		if(savingsAccount.withdraw(10000))
-		System.out.println(savingsAccount);
+			System.out.println(savingsAccount);
 		else 
 			System.out.println("Cannot widthdraw more then the balance");
 	}
-	
+
 }

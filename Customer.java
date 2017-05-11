@@ -3,7 +3,7 @@
  * Date: May 2017
  */
 public class Customer {
-	
+
 	private String name, address, phone; // declare variables
 
 	/**
@@ -65,7 +65,5 @@ public class Customer {
 		System.out.println(cust.toString());// prints customer info
 		cust.setName("John Brown"); // updates name
 		System.out.println(cust.toString()); // prints updated info
-
 	}
-
 }

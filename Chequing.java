@@ -20,6 +20,11 @@ public class Chequing extends Account
 		return (super.withdraw(amount + fee));
 	}
 
+	public boolean deposit(double amount)
+	{
+		return (super.deposit(amount - 2.50));
+	}
+
 	public void setFee(double fee)
 	{
 		this.fee = fee;
@@ -27,11 +32,21 @@ public class Chequing extends Account
 
 	public String toString()
 	{
-		return generateAcctNumber() + "," + getBalance();
+		return readAccountNumber() + "," + getBalance();
 	}
 
 	public static void main(String[] args) 
 	{
-		
+		Customer owner = new Customer("David Suzuki", "45 Daviselm Drive", "9054577941");
+		Chequing cheq = new Chequing(owner);
+		Account account = new Account();
+
+		account.setBalance(420.04); //setting balance 
+		System.out.println("Owner withdraw Success = " + account.withdraw(420.04)); //withdrawing
+		System.out.println(account.getBalance());
+
+		System.out.println("Owner deposit Success = " + account.deposit(20.00)); //withdrawing
+		System.out.println("New Balance " + account.getBalance());
+		System.out.println("Account Info " + account.toString());
 	}
 }
