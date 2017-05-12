@@ -1,69 +1,94 @@
+
 /**
  * @author Jhenelle
  * Date: May 2017
+ * Description: 
+ * Method List:
+ * 	Customer()-constructor; initialises private variables 
+ * 	Customer(String name, String address, String phone)- overrides constructor and initialises variables with user specific info
+ * 	getName()- retrieves name of costumer
+ * 	setName(String name)- sets user name
+ *  getAddress()-retrieves address of customer
+ *  setAddress(String address)- sets user address
+ *  getPhone()-retrieves the phone number of customer
+ *  setPhone()- sets user phone number
+ *  toString()- returns all user information as a string
+ *  main(String[] args) - self test methods 
+
  */
-public class Customer {
-
-	private String name, address, phone; // declare variables
-
-	/**
-	 * Default constructor to initialise the data
-	 */
-	public Customer() {
-		// initialises data
-		this.name = "";
-		this.address = "";
-		this.phone = "";
-
+	public class Customer {
+	    private String name, address, phone; // declare variables 
+	   
+	    public Customer(){
+	    	//initialises data
+	    	this.name="";
+	    	this.address="";
+	    	this.phone="";
+			
+		}
+	    
+		public Customer(String name, String address, String phone) {
+			//overrides Customer method and initialises variables with specific info
+			setName(name);
+			setAddress(address);
+			setPhone(phone);
+			
+		}
+	
+		
+		public String getName() {
+			//retrieves name
+			return name;
+		}
+	
+	
+		public void setName(String name) {
+			this.name = name;
+		}
+	
+	
+		public String getAddress() {
+			//retrieves address
+			return address;
+		}
+	
+	
+		public void setAddress(String address) {
+			this.address = address;
+		}
+	
+	
+		public String getPhone() {
+			//retrieves phone number
+			return phone;
+		}
+	
+	
+		public void setPhone(String phone) {
+			this.phone = phone;
+		}
+		
+		public String toString(){
+			//returns client info as a String 
+			return (getName()+ "," + getAddress() + "," + getPhone());
+		}
+	
+	
+		public static void main(String[] args) {
+			// self testing main method 
+			// test setter methods 
+		 Customer cust = new Customer ("Sean Smith", "9 Charlton Terrace", "99971623"); 
+		    // test getter methods 
+		 System.out.println(cust.toString());// prints customer info
+		 cust.setName("John Brown"); //updates name 
+		 System.out.println(cust.toString()); // prints updated info
+		 
+		
+			
+			
+			
+			
+	
+		}
+	
 	}
-
-	/**
-	 * Constructor to create a customer with specific info
-	 */
-	public Customer(String name, String address, String phone) {
-		// overrides Customer method and initialises variables with specific
-		// info
-		setName(name);
-		setAddress(address);
-		setPhone(phone);
-
-	}
-
-	// Getters and Setter methods
-	public String getName() {
-		// retrieves name
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getAddress() {
-		// retrieves address
-		return address;
-	}
-	public void setAddress(String address) {
-		this.address = address;
-	}
-	public String getPhone() {
-		// retrieves phone number
-		return phone;
-	}
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-
-	public String toString() {
-		// returns client info as a String
-		return (getName() + "," + getAddress() + "," + getPhone());
-	}
-
-	public static void main(String[] args) {
-		// self testing main method
-		// test setter methods
-		Customer cust = new Customer("Sean Smith", "9 Charlton Terrace", "99971623");
-		// test getter methods
-		System.out.println(cust.toString());// prints customer info
-		cust.setName("John Brown"); // updates name
-		System.out.println(cust.toString()); // prints updated info
-	}
-}
