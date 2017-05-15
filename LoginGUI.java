@@ -57,7 +57,7 @@ public class LoginGUI extends JFrame implements ActionListener {
 		bClose.setBounds (250, 325, 150, 25);  // Close button
 		frame.add (bClose);
 		
-		logo = new Picture(10, 10, new ImageIcon("DiamondBankLogo.png"));
+		logo = new Picture(new ImageIcon("DiamondBankLogo.png"), 10, 10);
 		frame.add (logo);
 		
 		bLogin.addActionListener(this);
