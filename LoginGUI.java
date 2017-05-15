@@ -25,6 +25,7 @@ public class LoginGUI extends JFrame implements ActionListener {
 	public LoginGUI() {
 		super ("Login");
 		setSize (500, 500);
+		setLocation (720, 200);
 		frame = getContentPane();
 		
 		
@@ -56,17 +57,28 @@ public class LoginGUI extends JFrame implements ActionListener {
 		bClose.setBounds (250, 325, 150, 25);  // Close button
 		frame.add (bClose);
 		
+		logo = new Picture(10, 10, new ImageIcon("DiamondBankLogo.png"));
+		frame.add (logo);
+		
 		bLogin.addActionListener(this);
 		bClose.addActionListener(this);
 		
 		setVisible(true);
+		setResizable(false);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+		if (e.getSource () == bLogin) {
+			
+		}
+		else if (e.getSource () == bClose) {
+			System.exit(0);
+		}
 		
 	}
+	
+	
 	
 	/**
 	 * @param args
