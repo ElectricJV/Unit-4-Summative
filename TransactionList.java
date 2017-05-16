@@ -113,8 +113,7 @@ public class TransactionList {
 		info.setStartAmount(950.00);
 		info.setEndAmount(375.50);
 		
-		transactionList.insert(info);
-		transactionList.saveListToFile();
+		
 	}
 
 }
