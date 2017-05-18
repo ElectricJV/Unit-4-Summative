@@ -42,10 +42,11 @@ public class Chequing extends Account
 		Account account = new Account();
 
 		account.setBalance(420.04); //setting balance 
-		System.out.println("Owner withdraw Success = " + account.withdraw(420.04)); //withdrawing
+		System.out.println("Owner withdraw Success = " + account.withdraw(420.04)); // Depositing
+		System.out.println("Owner withdraw Success = " + account.withdraw(-200.04)); // Depositing
 		System.out.println(account.getBalance());
 
-		System.out.println("Owner deposit Success = " + account.deposit(20.00)); //withdrawing
+		System.out.println("Owner deposit Success = " + account.deposit(20.00)); // Depositing
 		System.out.println("New Balance " + account.getBalance());
 		System.out.println("Account Info " + account.toString());
 	}

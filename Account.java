@@ -14,7 +14,7 @@ public class Account
 	private double balance;
 	private long accountNumber;
 	private final long MAXACCT = 999999999999L;
-	private Customer owner;
+	private Customer owner; 
 
 	// Default constructor
 	public Account ()
@@ -40,7 +40,6 @@ public class Account
 
 		// initializes customer object theOwner
 		theOwner = new Customer ();
-
 	}
 
 
@@ -48,7 +47,10 @@ public class Account
 	{
 		// deposits money
 		if(amount > 0)
-			this.balance = this.balance + amount;
+		{
+			this.balance = this.balance + (amount - 2.50);
+			return true;
+		}
 		return false;
 	}
 
@@ -58,12 +60,22 @@ public class Account
 		// Checks if the amount can be withdrawn
 		// and returns true if it is possible
 		// updates balance
-		if(amount <= this.balance) {
-			this.balance = this.balance - amount;
-			return true;
-		}
-		else 
+//		if(amount <= this.balance) {
+//			this.balance = this.balance - amount;
+//			return true;
+//		}
+//		else 
+//			return false;
+		if (this.balance - amount < 0)
+		{
 			return false;
+		}
+		else if (amount < 0)
+		{
+			return false;
+		}
+		balance = balance - amount;
+		return true;
 	}
 
 
@@ -77,7 +89,7 @@ public class Account
 		return owner;
 	}
 
-	public void generateAcctNumber ()
+	public void generateAcctNumber()
 	{
 		// optional method
 		// used to reset or regenerate account number
