@@ -13,7 +13,16 @@ import java.io.IOException;
  * Description:
  * Method List:
  * TransacitonList()-Constructor which initializes private variables
- * 
+ * private TransactionRecord [] getList ()
+ * private int getSize()
+ * public boolean insert (TransactionRecord record)
+ * public boolean delete (TransactionRecord record)
+ * public boolean change(TransactionRecord record)
+ * public boolean readFile (String fileName) throws IOException 
+ * public void saveToFile ()throws IOException
+ * public int binarySearch (String searchKey)
+ 
+ * public static void main(String[] args) throws IOException 
  * 
  */
 
