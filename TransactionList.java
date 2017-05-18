@@ -18,13 +18,10 @@ import java.io.IOException;
  * public boolean insert (TransactionRecord record)
  * public boolean delete (TransactionRecord record)
  * public boolean change(TransactionRecord record)
- * public boolean readFile (String fileName) throws IOException 
- * public void saveToFile ()throws IOException
- * public int binarySearch (String searchKey)
- 
+ * public void saveFile (String filename) throws IOException
  * public static void main(String[] args) throws IOException 
- * 
  */
+ 
 
 public class TransactionList {
 	// declares a variable
@@ -40,7 +37,7 @@ public class TransactionList {
 
 	//constructor
 	public TransactionList() {
-		this.maxSize = 100;
+		this.maxSize = 20;
 		this.size = 0;
 		this.list = new TransactionRecord[maxSize];
 		//this.file = new File("transactions.txt");
@@ -177,7 +174,7 @@ public class TransactionList {
 		char accType = 's';
 		double amount = 1000;
 		
-		for (int i=1; i<=20; i++) {
+		for (int i=0; i<=3; i++) {
 			if (i % 3 == 0) {
 				transType = "Withdraw";
 			}
