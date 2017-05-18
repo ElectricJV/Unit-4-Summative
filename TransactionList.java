@@ -138,6 +138,8 @@ public class TransactionList {
 			String transactionType = record.getTransactionType();
 			double amount = record.getAmount();
 
+			output = "";
+			
 			if (transactionType == "Deposit")
 				output += accountType + "\t" + transactionType + "\t\t" + amount + "\n";
 			else
@@ -174,7 +176,7 @@ public class TransactionList {
 		char accType = 's';
 		double amount = 1000;
 		
-		for (int i=0; i<=3; i++) {
+		for (int i=1; i<=20; i++) {
 			if (i % 3 == 0) {
 				transType = "Withdraw";
 			}
@@ -194,12 +196,12 @@ public class TransactionList {
 			info.setAccountType(accType);
 			info.setAmount(amount);
 			transactionList.insert(info);
-			transactionList.saveToFile();
+			
 
 			amount += 500;
 		}
 		
-//		
+		transactionList.saveToFile();
 
 		String transactions = transactionList.readFile("transactions.txt");
 
